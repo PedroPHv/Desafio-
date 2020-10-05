@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio 1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+body{
+    
+      background: #D9D9D9;
+     
+    }
+    h2 {
+      
+    font-size: 90px;
+    font-weight: 600;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing:-3px;
+    margin-bottom: 30px;
+    line-height: 102px;
+    text-align: center;
+    
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-linear-gradient(left, rgb(255, 0, 242), #471fd6);
+    
+    
+    
+    }
+</style>
+</head>
+
+<body>
+    
+    <div class="container"></div>
+<h2> Listagem </h2>
+<table class="table"  border='1'>
+    <thead class="thead-dark">
+        <tr>
+
+           <th>Nome</th>
+           <th>Data de Nascimento</th>
+           <th>CPF</th>
+           <th>RG</th>
+           <th>Jogo favorito</th>
+           <th>Jogo favorito alternativo</th>
+           <th>Genero favorito de jogo</th>
+           <th>Escolha</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <%  data.forEach( function(details){ %>
+            <tr class="danger"> 
+            
+                   <td><%= details. nome %></td> 
+                   <td><%= details. datadenascimento %></td>
+                   <td><%= details. cpf %></td>
+                   <td><%= details. rg %></td>
+                   <td><%= details. jogofavorito %></td>
+                   <td><%= details. jogofavorito2 %></td>
+                   <td><%= details. generodejogo %></td>
+                   <td><%= details. escolha %></td>
+                   <td><a href="/amand/delete/<%= details._id %>"><button type="button" class="btn btn-info">Deleta</button></a></td>
+                   <td><a  href="/amand/edit/<%= details._id %>"><button  type="button" class="btn btn-info">Editar</button></a></td>
+                   
+            </tr>
+            
+            <tr>
+               
+            </tr>
+        <%  })%>
+        </tbody>
+        <a class="btn btn-info"  href="/amand/cadastramento">Voltar</a>
+</table>
+
+
+</body>
+</html> 
