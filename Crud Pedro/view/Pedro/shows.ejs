@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My CRUD in NodeJS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <style>
+      body {
+        background: #666563;
+    }
+    h2 {
+      color: black;
+      text-align: center;
+    }
+    p {
+      color: black;
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Listagem de Registro</h2>
+        <p>Dados Pessoais</p>            
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <tr>
+                    <td>Nome</td>
+                    <td>Sobrenome</td>
+                    <td>Data de Nascimento</td>
+                    <td>CPF</td>
+                    <td>Cidade</td>
+                    <td>Estado</td>
+                    <td>Email</td>
+                    <td>Telefone</td>
+                </tr>
+            </thead>
+            <tbody>
+            <% data.forEach(function(details) { %>
+                <tr>
+                    <td><%= details.name %></td>
+                    <td><%= details.surname %></td>
+                    <td><%= details.datadenascimento %></td>
+                    <td><%= details.cpf %></td>
+                    <td><%= details.cidade %></td>
+                    <td><%= details.estado %></td>
+                    <td><%= details.email %></td>
+                    <td><%= details.telefone %></td>
+                      
+                 </tr>
+<tr>
+    <td><a href="/data/delete/<%= details._id %>"><button type="button" class="btn btn-secondary">Deleta</button></a></td>
+    <td><a  href="/data/edit/<%= details._id %>"><button  type="button" class="btn btn-secondary">Editar</button></a></td>
+</tr>
+                <% }) %>
+
+            </tbody>
+            <a class="btn btn-danger" href="/data/registra">Novo</a>
+            
+          </tbody>
+        </table>
+      </div>
+      
+      </body>
+      </html>
+    

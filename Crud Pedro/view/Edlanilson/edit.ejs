@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My CRUD in NodeJS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+      body {
+            background: #D9D9D9;
+           
+          }
+          h2 {
+            
+          font-size: 90px;
+          font-weight: 600;
+          font-size: 50px;
+          font-weight: 600;
+          letter-spacing:-3px;
+          margin-bottom: 30px;
+          line-height: 102px;
+          text-align: center;
+          
+          color:transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          background-image: -webkit-linear-gradient(left, #593dd5,green);
+          background-image:    -moz-linear-gradient(left, #593dd5, green); 
+          background-image:      -o-linear-gradient(left, #593dd5, green); 
+          
+          
+          }
+          .form-group{
+            font-size: 20px;
+            text-align: left;
+            
+          }
+          .md-form  {
+            font-size: 20px;
+            text-align: left;
+          }
+      
+      </style>
+
+<body>
+  <h2>Editar Registro</h2>
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">        
+
+<% data.forEach(function(details) { %>
+  <form action="/Ed/edit/<%= details._id %>" method="POST">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input class="form-control" type="text" placeholder="Nome (obrigatório)"
+        value="<%= details.name %>" name="name" required>
+    </div>                                            
+    <div class="form-group">
+      <label for="Sobrenome">Sobrenome</label>
+      <input class="form-control" type="text" placeholder="Sobrenome"
+        value="<%= details.sobrenome %>" name="sobrenome" required>
+    </div> 
+    <div class="form-group">
+      <label for="CPF">CPF</label>
+      <input class="form-control" type="text" placeholder="000.000.000-00"
+        value="<%= details.cpf %>" name="cpf" required minlength="0"
+        maxlength="14">
+    </div>                                                                                                                                 
+    <div class="form-group">
+      <label for="Filme">Nome Do Filme</label>
+      <input class="form-control" type="text" placeholder="Nome Do Filme"
+        value="<%= details.filme %>" name="filme" required>
+    </div>                                           
+    <div class="form-group">
+      <label for="Genero">Gênero Do Filme</label>
+      <input class="form-control" type="text" placeholder="Gênero Do Filme"
+        value="<%= details.genero %>" name="genero" required>
+    </div>  
+    <div class="form-group">
+      <label for="Ano">Data Do Filme</label>
+      <input class="form-control" type="date" placeholder="00/00/0000"
+        value="<%= details.ano %>" name="ano"
+        required>                                            
+    </div>                                          
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input class="form-control" type="text"
+        placeholder="xxxxxxxx@xxxxxx.com" value="<%= details.email %>"
+        name="email" required minlength="10" maxlength="30">
+    </div>                                           
+    <div class="form-group">
+      <label for="Opiniao">Porque da escolha?</label>
+      <input class="form-control" type="text" 
+        value="<%= details.opiniao %>" name="opiniao" required >
+    </div>
+    <input class="btn btn-success" type="submit" value="Salva">
+
+  </form>
+  <% }) %>
+</div>
+</body>
+
+</html>
