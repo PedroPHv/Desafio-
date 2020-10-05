@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio 1</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<style>
+body {
+      background: #D9D9D9;
+     
+    }
+    h2 {
+      
+    font-size: 90px;
+    font-weight: 600;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing:-3px;
+    margin-bottom: 30px;
+    line-height: 102px;
+    text-align: center;
+    
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-linear-gradient(left, #593dd5, #fc2b00);
+    background-image:    -moz-linear-gradient(left, #593dd5, #fc2b00); 
+    background-image:      -o-linear-gradient(left, #593dd5, #fc2b00); 
+    
+    
+    }
+    .form-group{
+      font-size: 20px;
+      text-align: left;
+      
+    }
+    .md-form  {
+      font-size: 20px;
+      text-align: left;
+    }
+
+</style>
+
+<body>
+  <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">
+    <div class="container">  
+
+      <h2>Atualização</h2>
+<% data. forEach(function(details) { %> 
+  <form action="/amand/edit/<%= details._id %>" method="POST">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input class="form-control" type="text" placeholder="Nome"
+        value="<%= details.nome %>" name="nome" required>
+    </div>                                            
+    <div class="form-group">
+      <label for="datadenascimento">Data de nascimento</label>
+      <input class="form-control" type="date" placeholder="Sobrenome"
+        value="<%= details.datadenascimento %>" name="datadenascimento" required>
+    </div>                                           
+    <div class="form-group">
+      <label for="cpf">CPF </label>
+      <input class="form-control" type="text" placeholder="00/00/0000"
+        value="<%= details.cpf %>" name="cpf"required minlength="0"
+        maxlength="14"
+        >                                            
+    </div>                                             
+    <div class="form-group">
+      <label for="rg">RG</label>
+      <input class="form-control" type="text" placeholder="000.000.000-00"
+        value="<%= details.rg %>" name="rg" required minlength="0"
+        maxlength="14">
+    </div>                                           
+    <div class="form-group">
+      <label for="jogofavorito">Jogo favorito</label>
+      <input class="form-control" type="text" placeholder=""
+        value="<%= details.jogofavorito %>" name="jogofavorito" required > 
+    </div>                                           
+    <div class="form-group">
+      <label for="jogofavorito2">Jogo favorito Alternativo</label>
+      <input class="form-control" type="text" placeholder=""
+        value="<%= details.jogofavorito2 %>" name="jogofavorito2" >
+    </div>                                           
+    <div class="form-group">
+      <label for="generodejogo">Genero favorito de jogo</label>
+      <input class="form-control" type="text"
+        placeholder="" value="<%= details.generodejogo %>"
+        name="generodejogo">
+    </div>                                           
+    <div class="form-group">
+      <label for="escolha">Porque da escolha?</label>
+      <input class="form-control" type="text" 
+        value="<%= details.escolha %>" name="escolha" required >
+    </div>
+
+        <button class="btn btn-info"><a href="/amand/show"></a>Voltar</button>
+        <button class="btn btn-info" type="submit">Salvar</button>
+    </form>
+<% })%>
+</body>
+</html>

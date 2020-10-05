@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio 1</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <style>
+   body {
+      background: #D9D9D9;
+     
+    }
+    h2 {
+      
+    font-size: 90px;
+    font-weight: 600;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing:-3px;
+    margin-bottom: 30px;
+    line-height: 102px;
+    text-align: center;
+    
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-linear-gradient(left, #593dd5, #fc2b00);
+     
+    
+    
+    }
+    .form-group{
+      font-size: 20px;
+      text-align: left;
+      
+    }
+    .md-form  {
+      font-size: 20px;
+      text-align: left;
+    }
+    
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registrar</h2>
+    
+    <form action="/amand/show" method="POST">
+      <div class="form-group">
+        <label for="Nome ">Nome</label>
+        <input class="form-control" type="text" placeholder="Nome" name="nome"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="Data de Nascimento">Data de Nascimento</label>
+        <input class="form-control" type="date" placeholder="00/00/0000"
+          name="datadenascimento" required>
+      </div>
+      <div class="form-group">
+        <label for="pin" for="CPF">CPF</label>
+        <input class="form-control" id="pin" type="text"placeholder="000.000.000-00" name="cpf" required  minlength="0" maxlength="14">
+      </div>
+      <div class="form-group">
+        <label for="RG">RG</label>
+        <input class="form-control" type="text" placeholder="RG" name="rg"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="Jogo favorito">Jogo favorito</label>
+        <input class="form-control" type="text" placeholder="Jogo favorito" name="jogofavorito"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="Jogo favorito">Jogo   favorito   alternativo</label>
+        <input class="form-control" type="text" placeholder="Jogo favorito" name="jogofavorito2"
+         >
+      </div>
+      <div class="form-group">
+        <label for="Genero do jogo favorito">Gênero de jogo favorito</label>
+        <input class="form-control" type="text" placeholder="Genero do Jogo favorito" name="generodejogo">
+      </div>
+      <div class="md-form">
+        <label for="Escolha">Porque da escolha?</label>
+        <textarea id="form7" class="md-textarea form-control" placeholder="" name="escolha" rows="3"></textarea><br>
+      </div>
+        <button type="submit"class="btn btn-outline-info">Cadastrar</button><br>
+    </form> 
+  </div>
+</body>
+</html>
